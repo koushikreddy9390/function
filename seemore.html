@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+
+   <style>
+      table,tr,td,th{
+         border: 2px solid black;
+         border-collapse: collapse;
+      }
+   </style>
+    
+</head>
+
+
+
+<body>
+<script>
+     let arr=  localStorage.getItem("seemore")
+   let arr2=JSON.parse(arr)
+
+
+var tablee=document.createElement("table")
+document.body.appendChild(tablee)
+
+
+let tr1=document.createElement("tr")
+tablee.appendChild(tr1)
+
+
+let  td1=document.createElement("td")
+let arr3=document.createElement("img")
+   arr3.setAttribute("src",arr2.image)
+   arr3.style.width="100px"
+   td1.appendChild(arr3)
+   tr1.appendChild(td1)
+
+let td2=document.createElement("td")
+td2.innerText=arr2.description
+tr1.appendChild(td2)
+
+
+
+
+let td3=document.createElement("td")
+td3.innerText=arr2.rating.rate
+tr1.appendChild(td3)
+    
+</script>
+</body>
+</html>
